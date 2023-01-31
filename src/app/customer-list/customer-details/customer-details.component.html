@@ -1,0 +1,18 @@
+<ng-container *ngIf="selectedCustomer; else noCustomer">
+  <div class="customer">
+    <div class="customer-container">
+      <div class="customer-header">
+        <div class="customer-id">Number: {{ selectedCustomer.id }}</div>
+        <div class="username">{{ selectedCustomer.username }}</div>
+      </div>
+      <div class="customer-full-name">
+        <div class="first-name">{{ selectedCustomer.firstName }}</div>
+        <div class="last-name">{{ selectedCustomer.lastName }}</div>
+      </div>
+      <div class="about-me">{{ selectedCustomer.aboutMe }}</div>
+    </div>
+  </div>
+</ng-container>
+  <ng-template #noCustomer>
+    <div class="error">Customer Not Found</div>
+  </ng-template>
